@@ -21,7 +21,7 @@ def index():
             uClient = uReq(flipkart_url)
             flipkartPage = uClient.read()
             uClient.close()
-            flipkart_html = bs(flipkartPage, "html.parser")`
+            flipkart_html = bs(flipkartPage, "html.parser")
             bigboxes = flipkart_html.findAll("div", {"class": "_1AtVbE col-12-12"})
             del bigboxes[0:3]
             box = bigboxes[0]
